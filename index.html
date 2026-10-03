@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Khu Huấn Luyện Bắn Súng 3D</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Barlow:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/net.css">
+</head><body data-s="menu">
+<div id="pad"></div>
+<div id="hud">
+<div id="cross"><i></i><i></i><i></i><i></i><b></b></div><div id="hm"></div>
+<div id="top"><div class="tag hd">HUẤN LUYỆN</div><div id="st"></div></div>
+<div id="mid" class="hd"><span id="tm">60</span><span id="sc">0</span></div>
+<div id="kf"></div><div id="cdn" class="hd"></div>
+<div id="hp"><i id="hpb"></i><b id="hpn" class="hd">100</b></div><div id="hurt"></div>
+<div id="dead" class="hd">BẠN BỊ HẠ GỤC<span>Hồi sinh sau <b id="dsec">3</b>s</span></div>
+<div id="ammo"><div id="wn" class="hd"></div><div class="hd"><span id="am"></span><span id="mg"></span></div><div id="abw"><div id="ab"></div></div></div>
+<div class="keys">WASD đi · bấm đúp W chạy · Chuột ngắm + bắn<br>Space nhảy · C ngồi · R nạp đạn · 1/2 đổi súng</div>
+<div id="jb"><div id="jk"></div></div>
+<div class="b" id="rs">☰</div>
+<div class="b" id="bf">BẮN</div><div class="b" id="bj">NHẢY</div><div class="b" id="bc">NGỒI</div><div class="b" id="br">NẠP</div><div class="b" id="bw">ĐỔI</div>
+</div>
+<div id="menu">
+<div class="left"><h1 class="logo rv" style="--i:0">Khu huấn luyện<br>bắn súng 3D</h1>
+<div class="sub rv" style="--i:1">Luyện tay trên 3 bản đồ, bắn đầu ăn gấp đôi điểm, xem lại trận vừa chơi.</div>
+<button class="btn pri rv" style="--i:2" id="go">VÀO TRẬN</button>
+<button class="btn rv" style="--i:3" id="onl">ĐẤU 1v1 ONLINE</button></div>
+<div class="panel rv" style="--i:3"><h3>Bản đồ</h3><div id="maps"></div>
+<h3>Chế độ</h3><div class="seg" id="modes"><button class="on" data-m="0">Luyện tập tự do</button><button data-m="1">Trận 60 giây</button></div>
+<h3>Thiết bị</h3><div class="seg" id="devs"><button data-d="mob">📱 Điện thoại</button><button data-d="pc">🖥 Máy tính</button></div><small id="dl"></small></div>
+</div>
+<div id="res"><div class="card"><div id="rk" class="hd">S</div><div id="rinfo"></div>
+<div class="rows"><div><span>Điểm</span><b id="r1">0</b></div><div><span>Hạ gục</span><b id="r2">0</b></div><div><span>Bắn đầu</span><b id="r3">0</b></div><div><span>Chính xác</span><b id="r4">0</b></div></div>
+<div class="acts"><button class="btn" id="again" style="background:var(--acc);color:#1a1000">CHƠI LẠI</button><button class="btn" id="rpb">XEM LẠI TRẬN</button><button class="btn" id="tomenu">MENU</button></div></div></div>
+<div id="rp"><span class="tagr hd">XEM LẠI</span><button class="btn sm" id="rpp">❚❚</button><input type="range" id="rpr" min="0" max="1000" value="0"><button class="btn sm" id="rps">x1</button><button class="btn sm" id="rpx">THOÁT</button></div>
+<div id="lobby"><div class="card">
+<h2 class="hd">ĐẤU 1v1 ONLINE</h2>
+<div id="lbs"></div>
+<input id="lsrv" aria-label="Địa chỉ máy chủ" spellcheck="false">
+<div class="acts"><button class="btn" id="lmk">TẠO PHÒNG</button></div>
+<div class="acts"><input id="lcode" maxlength="4" placeholder="MÃ PHÒNG" autocomplete="off"><button class="btn" id="ljn">VÀO PHÒNG</button></div>
+<div class="acts"><button class="btn" id="lgo" style="background:var(--acc);color:#1a1000" disabled>BẮT ĐẦU</button><button class="btn" id="lx">ĐÓNG</button></div>
+</div></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="js/core.js"></script>
+<script src="js/map.js"></script>
+<script src="js/player.js"></script>
+<script src="js/state.js"></script>
+<script src="js/effects.js"></script>
+<script src="js/weapons.js"></script>
+<script src="js/update.js"></script>
+<script src="js/replay.js"></script>
+<script src="js/input.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/net.js"></script>
+<script src="js/anim.js"></script>
+<script src="js/main.js"></script>
+</body></html>
